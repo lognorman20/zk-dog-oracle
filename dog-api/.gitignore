@@ -1,3 +1,6 @@
+# self
+.gitignore
+
 # Logs
 logs
 *.log
@@ -102,3 +105,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Public/private key info
+.secrets

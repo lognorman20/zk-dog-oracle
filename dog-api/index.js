@@ -1,5 +1,6 @@
 const Koa = require("koa");
 const Router = require("@koa/router");
+const dotenv = require('dotenv').config();
 const { isReady, PrivateKey, Field, Signature, UInt64, CircuitString } = require("snarkyjs");
 
 const PORT = process.env.PORT || 3000;
@@ -14,7 +15,7 @@ async function getDogPic(dogId) {
   /* TODO: create env variable for private key of api */
   const privateKey = PrivateKey.fromBase58(
     process.env.PRIVATE_KEY ??
-      "EKF65JKw9Q1XWLDZyZNGysBbYG21QbJf3a4xnEoZPZ28LKYGMw53"
+      process.env.privatekey
   );
 
   // We compute the public key associated with our private key
@@ -30,13 +31,13 @@ async function getDogPic(dogId) {
 
   // sign the image payload
   const circuitAddr = CircuitString.fromString(link);
-  const imgAddr = circuitAddr.hash();
+  const imgHash = circuitAddr.hash();
 
   const id = Field(dogId);  
-  const signature = Signature.create(privateKey, [id, imgAddr]);  
+  const signature = Signature.create(privateKey, [id, imgHash]);  
 
   return {
-    data: { id: id, imgAddr: imgAddr },
+    data: { id: id, imgAddr: link },
     signature: signature,
     publicKey: publicKey,
   };
