@@ -14,8 +14,8 @@ async function getDogPic(dogId) {
 
   /* TODO: create env variable for private key of api */
   const privateKey = PrivateKey.fromBase58(
-    process.env.PRIVATE_KEY ??
-      process.env.privatekey
+    process.env.privatekey ??
+      'EKDrpNZRRUkQiKE8PcdCKWmRfRxHzHQ4h4no8Jpy79sZUPDh7TG1'
   );
 
   // We compute the public key associated with our private key
