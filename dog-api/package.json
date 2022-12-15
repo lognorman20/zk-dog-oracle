@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jackryanservia/mina-credit-score-signer.git"
+    "url": "git+https://github.com/lognorman20/zk-dog-oracle.git"
   },
   "keywords": [
     "mina",
@@ -19,12 +19,12 @@
     "zk",
     "credential"
   ],
-  "author": "Jack Ryan Servia",
+  "author": "Logan Norman",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/jackryanservia/mina-credit-score-signer/issues"
+    "url": "https://github.com/lognorman20/zk-dog-oracle"
   },
-  "homepage": "https://github.com/jackryanservia/mina-credit-score-signer#readme",
+  "homepage": "https://github.com/lognorman20/zk-dog-oracle",
   "dependencies": {
     "@koa/router": "^12.0.0",
     "dotenv": "^16.0.3",
