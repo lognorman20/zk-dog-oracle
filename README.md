@@ -6,13 +6,13 @@ This project focuses on verifying dog images from an API have not been tampered 
 
 All oracle code can be found under the `dog-api` directory. 
 
+This project is fully deployed on the web. To run this oracle live on the web, go to `https://shark-app-b55zg.ondigitalocean.app/dog/random/[INSERT RANDOM NUMBER HERE]` to get a random dog picture.
+
 To launch the oracle server locally, run the following command:
 ```
 node dog-api/index.js
 ```
 Then, go to your web browser and type in the link `http://localhost:3000/dog/random/[INSERT RANDOM NUMBER HERE]` to get a random dog picture that is signed using Mina's cryptographic functions. For instance, after running the above command, go to the following link on your browser: `http://localhost:3000/dog/random/8`.
-
-This project is also fully deployed on the web. To run this oracle live on the web, go to `https://shark-app-b55zg.ondigitalocean.app/dog/random/[INSERT RANDOM NUMBER HERE]` to get a random dog picture.
 
 ## Using the oracle from a zkApp
 
